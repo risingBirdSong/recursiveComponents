@@ -5,13 +5,16 @@ body {
   justify-content: center;
   min-height: 80vh;
   min-width: 80vw;
+  /* color: blueviolet; */
+  /* background-color: rgb(219, 55, 55); */
 }
 
 
 
 .myContainer {
   display: flex;
-  background-color: antiquewhite;
+  /* background-color: rgba(200, 5, 5, alpha); */
+  /* background-color: antiquewhite; */
   justify-content: center;
   align-items: center;
   min-width: 20vw;
