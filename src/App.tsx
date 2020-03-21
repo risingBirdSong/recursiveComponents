@@ -15,7 +15,7 @@ const rcrsPlyA = (props: rcrsPlyA_propsI) => {
   }
   props.recursiveCount--;
   return (
-    <div style={{ backgroundColor: "beige", border: "1px solid black", width: props.recursiveCount * 20, height: props.recursiveCount * 20, display: "flex", justifyContent: "center" }}>
+    <div style={{ backgroundColor: "beige", border: "1px solid black", width: props.recursiveCount * 20, height: props.recursiveCount * 20, display: "flex", justifyContent: "center", alignItems: "center" }}>
       {rcrsPlyA(props)}
     </div>
   )
@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <div className="myContainer">
-        {rcrsPlyA({ content: "hello world", recursiveCount: 10 })}
+        {rcrsPlyA({ content: "!", recursiveCount: 10 })}
       </div>
     </div>
   );
