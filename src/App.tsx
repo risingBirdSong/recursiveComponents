@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { findByLabelText } from '@testing-library/react';
 
 
 interface rcrsPlyA_propsI {
@@ -14,8 +15,8 @@ const rcrsPlyA = (props: rcrsPlyA_propsI) => {
   }
   props.recursiveCount--;
   return (
-    <div style={{ backgroundColor: "beige", border: "3px solid black", width: props.recursiveCount * 20, height: props.recursiveCount * 20 }}>
-      {rcrsPlyA(props)};
+    <div style={{ backgroundColor: "beige", border: "1px solid black", width: props.recursiveCount * 20, height: props.recursiveCount * 20, display: "flex", justifyContent: "center" }}>
+      {rcrsPlyA(props)}
     </div>
   )
 }
