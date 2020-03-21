@@ -6,25 +6,22 @@ import './App.css';
 
 interface rcrsPlyA_propsI {
   content: string;
-  cnt: number;
-  border?: {
-    thickness: number
-  }
-  bckGrndClrMltp: number,
-  shdwClr: string,
-  brdRdsMltp: number,
-  brdColor: string,
-  mrgRight: number,
-  mrgTop: number,
+  count: number;
+  backgroundColorMultiply: number,
+  shadowColor: string,
+  borderRadiusColorMult: number,
+  borderColor: string,
+  marginRight: number,
+  marginTop: number,
 }
 
 const rcrsPlyA = (props: rcrsPlyA_propsI) => {
-  if (props.cnt <= 0) {
+  if (props.count <= 0) {
     return props.content;
   }
-  props.cnt--;
+  props.count--;
   return (
-    <div style={{ backgroundColor: `rgb(${255 - props.cnt * props.bckGrndClrMltp}, 20, ${55 + props.cnt * 1})`, border: `${props.cnt}px solid ${props.brdColor}`, width: props.cnt * 80, height: props.cnt * 80, display: "flex", justifyContent: "center", alignItems: "center", borderRadius: `${props.cnt * props.brdRdsMltp}px`, boxShadow: `-10px -10px 5px -15px ${props.shdwClr}, ${props.cnt * -1.5 - 7}px ${props.cnt * -1.2 - 7}px 5px -10px black , inset ${props.cnt * 1.5}px ${props.cnt * 1.5}px ${props.cnt * 2}px ${props.cnt}px orange `, marginTop: `${props.mrgTop * props.cnt}px`, marginRight: `${props.mrgRight * props.cnt}px`, padding: props.cnt * 2 }}>
+    <div style={{ backgroundColor: `rgb(${255 - props.count * props.backgroundColorMultiply}, 20, ${55 + props.count * 1})`, border: `${props.count}px solid ${props.borderColor}`, width: props.count * 80, height: props.count * 80, display: "flex", justifyContent: "center", alignItems: "center", borderRadius: `${props.count * props.borderRadiusColorMult}px`, boxShadow: `-10px -10px 5px -15px ${props.shadowColor}, ${props.count * -1.5 - 7}px ${props.count * -1.2 - 7}px 5px -10px black , inset ${props.count * 1.5}px ${props.count * 1.5}px ${props.count * 2}px ${props.count}px orange `, marginTop: `${props.marginTop * props.count}px`, marginRight: `${props.marginRight * props.count}px`, padding: props.count * 2 }}>
       {rcrsPlyA(props)}
     </div>
   )
@@ -41,7 +38,7 @@ function App() {
       </div>
       <div className="myContainer">
 
-        {toggleFirst ? rcrsPlyA({ content: ".", cnt: 10, bckGrndClrMltp: 15, shdwClr: "red", brdRdsMltp: 15, brdColor: "coral", mrgTop: 7, mrgRight: 7 }) : ""}
+        {toggleFirst ? rcrsPlyA({ content: ".", count: 10, backgroundColorMultiply: 15, shadowColor: "red", borderRadiusColorMult: 15, borderColor: "coral", marginTop: 7, marginRight: 7 }) : ""}
       </div>
     </div>
   );
