@@ -3,12 +3,19 @@ import logo from './logo.svg';
 import './App.css';
 
 
+
 interface rcrsPlyA_propsI {
   content: string;
   cnt: number;
   border?: {
     thickness: number
   }
+  bckGrndClrMltp: number,
+  shdwClr: string,
+  brdRdsMltp: number,
+  brdColor: string,
+  mrgRight: number,
+  mrgTop: number,
 }
 
 const rcrsPlyA = (props: rcrsPlyA_propsI) => {
@@ -17,7 +24,7 @@ const rcrsPlyA = (props: rcrsPlyA_propsI) => {
   }
   props.cnt--;
   return (
-    <div style={{ backgroundColor: `rgb(${255 - props.cnt * 5}, 55, ${55 + props.cnt * 4})`, border: ` ${props.border?.thickness ?? 1}px solid black`, width: props.cnt * 80, height: props.cnt * 80, display: "flex", justifyContent: "center", alignItems: "center", borderRadius: `${props.cnt * 5}px`, boxShadow: `${props.cnt}px -${props.cnt}px 20px 1px darkmagenta` }}>
+    <div style={{ backgroundColor: `rgb(${255 - props.cnt * props.bckGrndClrMltp}, 20, ${55 + props.cnt * 1})`, border: ` ${props.border?.thickness ?? 1}px solid ${props.brdColor}`, width: props.cnt * 80, height: props.cnt * 80, display: "flex", justifyContent: "space-around", alignItems: "center", borderRadius: `${props.cnt * props.brdRdsMltp}px`, boxShadow: `10px -${props.cnt}px 20px 1px ${props.shdwClr}`, marginTop: `${props.mrgTop * props.cnt}px`, marginRight: `${props.mrgRight * props.cnt}px` }}>
       {rcrsPlyA(props)}
     </div>
   )
@@ -34,7 +41,7 @@ function App() {
       </div>
       <div className="myContainer">
 
-        {toggleFirst ? rcrsPlyA({ content: "!", cnt: 10, border: { thickness: 5 } }) : ""}
+        {toggleFirst ? rcrsPlyA({ content: "!", cnt: 10, border: { thickness: 3 }, bckGrndClrMltp: 15, shdwClr: "red", brdRdsMltp: 15, brdColor: "coral", mrgTop: 7, mrgRight: 7 }) : ""}
       </div>
     </div>
   );
