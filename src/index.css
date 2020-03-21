@@ -5,8 +5,16 @@ body {
   justify-content: center;
   min-height: 80vh;
   min-width: 80vw;
-  /* color: blueviolet; */
+  /* color: darkmagenta ; */
   /* background-color: rgb(219, 55, 55); */
+}
+
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 
@@ -19,4 +27,25 @@ body {
   align-items: center;
   min-width: 20vw;
   min-height: 20vh;
+  margin: auto;
+}
+
+.buttonHolder {
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: chocolate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
+.buttonHolder button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 3px;
+  background-color: burlywood;
+  font-size: x-large;
+  color: black;
 }
