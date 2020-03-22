@@ -1,12 +1,14 @@
 body {
-  background-color: bisque;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;
-  min-width: 80vw;
+  min-height: 200vh;
+  min-width: 200vw;
   /* color: darkmagenta ; */
   /* background-color: rgb(219, 55, 55); */
+  background: linear-gradient(#e66465, #9198e5);
+  color: darkred;
+  /* border: 2px i; */
 }
 
 
@@ -15,6 +17,8 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  /* color: rgba(red, green, blue, alpha); */
 }
 
 
@@ -29,6 +33,7 @@ body {
   min-height: 20vh;
   margin: auto;
   font-size: xx-large;
+
 }
 
 .buttonHolder {
