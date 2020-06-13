@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
-
-
 interface rcrsPlyA_propsI {
   content: string;
   count: number;
@@ -51,13 +48,7 @@ function App() {
   let [toggleFirst, settoggleFirst] = useState(true)
   return (
     <div className="App">
-      {/* <div className="buttonHolder">
-        <button onClick={() => {
-          settoggleFirst(!toggleFirst);
-        }}>1st</button>
-      </div> */}
       <div className="myContainer">
-
         {toggleFirst ? rcrsPlyA({ content: ".", count: 15, backgroundColorMultiply: 15, shadowColor: "red", borderColor: "red", inc: 0, marginTop: 7, marginRight: 7 }) : ""}
       </div>
     </div>
